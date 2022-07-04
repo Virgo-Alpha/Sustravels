@@ -23,7 +23,7 @@ python3 -m pip install --user virtualenv
 Clone the repository:
 
 ```bash
-git clone https://github.com/Emmastro/tatu-ip-group3.git
+git clone https://github.com/Virgo-Alpha/Sustravels.git
 ```
 
 Cd on the root folder of the project
