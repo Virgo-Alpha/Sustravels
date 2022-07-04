@@ -1,0 +1,280 @@
+
+body {
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+}
+
+header {
+    color: #FFFFFF;
+    background-color: #284b63;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    size: xx-large;
+    padding: 200px 0;
+}
+
+#About {
+    background-color: #284b63;
+    color: #000000;
+    text-align: center;
+}
+
+#About h2 {
+    padding: 50px 0 0 0;
+}
+
+header ul {
+    margin: 0;
+    padding: 0 0 0 50%;
+    list-style: none;
+}
+
+header li {
+    display: inline-block;
+}
+
+header li a {
+    padding: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #c3c3c3;
+}
+
+header li a:hover {
+    color: white;
+    padding: 25px;
+    border-radius: 10%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    /*max-width: 900px;*/
+}
+
+h4, h3 {
+    text-align: center;
+    /*border-bottom: solid 1px black;*/
+    text-decoration: double;
+}
+
+#About h4 {
+    color: whitesmoke;
+}
+
+#Services, #ContactUs {
+    background-color: #000000;
+    color: aliceblue;
+    padding-bottom: 50px;
+}
+
+.service {
+    width: 32%;
+    padding: 0 25px;
+    display: inline-block;
+    font-size: 16px;
+    border-right: #c3c3c3 solid 1px;
+    margin: auto;
+    text-align: center;
+}
+
+.service img {
+    width: 70%;
+    height: 70%;
+}
+
+section {
+    padding: 25px 0 15px 0;
+}
+
+form {
+    background-color: #284b63;
+    width: max-content;
+    margin: auto;
+    padding: 50px;
+    color: #000000;
+}
+
+footer {
+    background: #353535;
+    padding: 32px 0;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.flex-parent {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-parent2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-parent2 img {
+    width: 480px;
+    height:320px;
+    border: #000000 solid 1px;
+}
+
+.flex-parent2 div {
+    padding: 30px;
+}
+
+.flex-parent2 p {
+    text-align: center;
+    padding: 50px 50px;
+}
+
+#founder {
+    border-radius: 50%;
+    width: 400px;
+    height:400px;
+}
+
+#About p {
+    padding-top: 15%;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer li {
+    display: block;
+    margin-top: 25px;
+}
+
+footer li a {
+    padding: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #c3c3c3;
+}
+
+footer li a:hover {
+    color: white;
+}
+
+#footer1, #footer2 {
+    width: 50%;
+}
+
+.founder {
+    padding: 50px 0 0 0;
+}
+
+#About h3 {
+    padding: 0 0 25px;
+}
+
+#sell {
+    width: 50%;
+}
+
+/*A typical breakpoint for a mobile screen is 480px width.*/
+@media screen and (max-width: 480px) {
+    .btn{
+        display: block;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin: 0 0 8px 0;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 25px 0 15px 0;
+    }
+
+    .service {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        margin: 0 0 10px 0;
+        border-bottom:#c3c3c3 solid 1px;
+        font-size: 16px;
+    }
+
+    .service img {
+        width: 15%;
+        min-width: 60px;
+        margin-right: 20px;
+    }
+
+    #fname {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .flex-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    footer li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    footer div {
+        margin-bottom: 0;
+    }
+
+    #email2{
+        margin-bottom: 15px;
+    }
+
+    #lname-label, #email-label {
+        display: block;
+    }
+
+    .flex-parent2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .flex-parent2 img {
+        width: 350px;
+        height:200px;
+    }
+    
+    .flex-parent2 div {
+        padding: 10px;
+    }
+    
+    .flex-parent2 p {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #founder {
+        border-radius: 50%;
+        width: 300px;
+        height:350px;
+        margin: auto;
+    }
+}
+

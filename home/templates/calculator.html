@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{% static 'home/CSS/styles.css' %}">
+    <title>Confit.com</title>
+</head>
+<body>
+    <!---A menu with services, About Us, Contact Us and Join Us (CTA) -->
+    <header>
+
+        <ul>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#About">About Us</a></li>
+            <li><a href="#ContactUs">Contact Us</a></li>
+            <li class="btn btn-default btn-primary"><a href="#">Join Us</a></li>
+        </ul>
+
+        <div class="container">
+            <h1>
+                Confit - We help companies offset their carbon emissions
+            </h1>
+    </div>
+    </header>
+
+        <!---Services ( , customer segments), About Us (Impact Statement, Mission statement, Founder Profile, Country of operations), Contact Us (Form, Newsletter sign up), Footer (copyrights, menu, maybe newsletter signup) as SECTIONS-->
+        <section id="Services">
+            <h3>Our Services</h3>
+            <div class="container">
+                <div class="service">
+                    <img src="{% static 'home/images/buy.jpg' %}" alt="We help you buy carbon credits">
+                    <br>
+                    <br>
+                    <p>We facilitate the sourcing, due diligence and purchase of carbon credits so that your company can offset its carbon emissions and reduce its carbon footprint</p>
+                </div>
+
+                <div class="service">
+                    <img id="sell" src="{% static 'home/images/seller.jpeg' %}" alt="We help you sell carbon credits">
+                    <br>
+                    <br>
+                    <p>We facilitate the verification and sale of carbon credits so that your conservancy, carbon sink or greentech company can have an additional source of revenue as you help others offset their greenhouse gas emissions </p>
+                </div>
+
+                <div class="service">
+                    <img src="{% static 'home/images/consulting.jpeg' %}" alt="We offer ESG consultancy services">
+                    <br>
+                    <br>
+                    <p>We offer ESG consultancy services to ensure your firm or organization is up to speed on matters to do with environmental conservation, gender equity and equality, and laws and regulations in your industry.</p>
+                </div>
+
+                <h3>Our Customers</h3>
+                <div class="flex-parent2">
+                    <div>
+                        <img src="{% static 'home/images/climate-conscious.jpg' %}" alt="Companies looking to offset their carbon emissions">
+                    </div>
+                    <div>
+                        <p>Climate-conscious companies that are looking to offset their carbon emissions. We help mining corporations, tourist getaways and even banks demonstrate their commitment to fighting climate change via buying carbon offsets and providing them with ESG consultancy services</p>
+                    </div>
+                </div>
+
+                <div class="flex-parent2">
+                    <div>
+                        <img src="{% static 'home/images/green.png' %}" alt="Green Project developers">
+                    </div>
+                    <div>
+                        <p>Green project initiators whose projects act as carbon sinks or prevent the emission of carbon into the atmosphere. Carbon sinks can be natural such as a conservancy with a large number of trees/sea algae or artificial such as an EV manufacturing plant. We are particularly interested in conservancies that are both carbon sinks and preservers of biodiversity.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="About">
+            <h3>About Us</h3>
+
+            <h4>Our Impact Statement</h4>
+                <h2>
+                    Our Primary Focus at Confit is achieving a net-zero emissions world by the year 2050.
+                </h2>
+                    <cite>
+                        - Benson Mugure, Founder & CEO @ Confit
+                    </cite>
+
+            <h4 class="founder">Founder Profile</h4>
+            <div class="flex-parent2 container">
+                <div>
+                    <img id="founder" src="{% static 'home/images/founder.jpg' %}" alt="Benson Mugure">
+                </div>
+                <div>
+                    <p>Benson Mugure is a passionate serial entrepreneur in the Fintech, GreenTech and Film industries. His experience includes being a relationship officer at Equity Bank Limited in Kenya, an Executive Assistant to the CEO of a consulting firm in Mauritius, a Future Fintech Champion at the Mauritius African Fintech Hub and a Circular Economy Champion at the Ellen MacArthur Foundation in London.
+                    </p>
+                    <!--LinkedIn, Twitter, IG buttons-->
+                </div>
+            </div>
+
+        </section>
+
+        <section id="ContactUs">
+            <h3>Contact Us</h3>
+                <form>
+                    <label for="fname" id="fname-label">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First name" required>
+
+                    <label for="lname" id="lname-label">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name" required> <br><br>
+
+                    <!---Email input-->
+                    <label for="email" id="email-label">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required><br>
+
+                    <!---Radio button-->
+                    <p>Please choose your gender: </p>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">male</label><br>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">female</label><br>
+
+                    <p>Please type your message below:</p>
+                    <textarea class="form-control" name="message" rows="10"></textarea>
+                    <br><br>
+
+                    <!---Submit button-->
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+        </section>
+    
+    <footer>
+        <div class="flex-parent">
+        <!---Newsletter subscription (Hyper benchmark)-->
+        <div id="footer1">
+            <ul>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#ContactUs">Contact Us</a></li>
+                <li class="btn btn-default btn-primary"><a href="#">Join Us</a></li>
+            </ul>
+            <br><br><br>
+            <p>
+                Designed by <a href="https://github.com/Virgo-Alpha" target="_blank">Virgo Alpha</a> <!---Link to my github profile-->
+            </p>
+        </div>
+
+      <div id="footer2">
+        <p>Register for our Newsletter</p>
+        <input type="email" id="email2" name="email" placeholder="email address" required>
+        <input class="btn btn-primary" id="submit" type="submit" value="Subscribe">
+        <br>
+        <br>
+        <p>
+            Just want to say hi? Send us an email at b.mugure@alustudent.com  <!---Link to user's inbox-->
+        </p>
+        <br>
+        <br>
+        <br>
+        <p>
+            <!--Copyright icon--> 
+            &#169 2022 Confit. All rights reserved
+        </p>
+      </div>
+    </div>
+    </footer>
+</body>
+</html>
