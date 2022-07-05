@@ -8,14 +8,14 @@
     {% load static %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" href="{% static 'home/CSS/styles.css' %}">
-    <title>Confit.com</title>
+    <title>Sustravels</title>
 </head>
 <body>
-    <!---A menu with services, About Us, Contact Us and Join Us (CTA) -->
+    <!---A menu with Calculator, About Us, Contact Us and Join Us (CTA) -->
     <header>
 
         <ul>
-            <li><a href="#Services">Services</a></li>
+            <li><a href="#Calculator">Calculator</a></li>
             <li><a href="#About">About Us</a></li>
             <li><a href="#ContactUs">Contact Us</a></li>
             <li class="btn btn-default btn-primary"><a href="#">Join Us</a></li>
@@ -23,67 +23,72 @@
 
         <div class="container">
             <h1>
-                Confit - We help companies offset their carbon emissions
+                Sustravels - We help tourists calculate their travelling carbon footprint and take actions to offset it.
             </h1>
     </div>
     </header>
 
-        <!---Services ( , customer segments), About Us (Impact Statement, Mission statement, Founder Profile, Country of operations), Contact Us (Form, Newsletter sign up), Footer (copyrights, menu, maybe newsletter signup) as SECTIONS-->
-        <section id="Services">
-            <h3>Our Services</h3>
+        <!---Calculator ( , customer segments), About Us (Impact Statement, Mission statement, Founder Profile, Country of operations), Contact Us (Form, Newsletter sign up), Footer (copyrights, menu, maybe newsletter signup) as SECTIONS-->
+
+        <!-- =========================================================================================================== -->
+        <section id="Calculator">
+            <h3>The Calculator</h3>
             <div class="container">
-                <div class="service">
-                    <img src="{% static 'home/images/buy.jpg' %}" alt="We help you buy carbon credits">
-                    <br>
-                    <br>
-                    <p>We facilitate the sourcing, due diligence and purchase of carbon credits so that your company can offset its carbon emissions and reduce its carbon footprint</p>
+                <!-- <form action="{% url 'calculator' %}" method="post"> -->
+                    {% csrf_token %}
+                    <fieldset>
+                        <legend><h1>Calculate your carbon footprint here</h1></legend>
+                        <!-- {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %} -->
+                        <!-- {% for choice in question.choice_set.all %} -->
+                            <!-- <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+                        {% endfor %} -->
+                        
+                                <!---Drop down input-->
+                                <div>
+                                    <label for="dropdown1">Departure Location:</label>
+
+                                    <select name="dropdown1" id="dropdown1">
+                                    <option value="Instagram">London</option>
+                                    <option value="MySite">France</option>
+                                    <option value="street">New York</option>
+                                    <option value="home">Hong Kong</option>
+                                    </select>
+                                </div>
+
+
+                <!---Drop down input-->
+                <div>
+                    <label for="dropdown2">Destination location:</label>
+
+                    <select name="dropdown2" id="dropdown2">
+                        <option value="Instagram">Nairobi</option>
+                        <option value="MySite">Mombasa</option>
+                        <option value="street">Pamplemousses</option>
+                        <option value="home">Kigali</option>
+                    </select>
                 </div>
 
-                <div class="service">
-                    <img id="sell" src="{% static 'home/images/seller.jpeg' %}" alt="We help you sell carbon credits">
-                    <br>
-                    <br>
-                    <p>We facilitate the verification and sale of carbon credits so that your conservancy, carbon sink or greentech company can have an additional source of revenue as you help others offset their greenhouse gas emissions </p>
-                </div>
-
-                <div class="service">
-                    <img src="{% static 'home/images/consulting.jpeg' %}" alt="We offer ESG consultancy services">
-                    <br>
-                    <br>
-                    <p>We offer ESG consultancy services to ensure your firm or organization is up to speed on matters to do with environmental conservation, gender equity and equality, and laws and regulations in your industry.</p>
-                </div>
-
-                <h3>Our Customers</h3>
-                <div class="flex-parent2">
-                    <div>
-                        <img src="{% static 'home/images/climate-conscious.jpg' %}" alt="Companies looking to offset their carbon emissions">
-                    </div>
-                    <div>
-                        <p>Climate-conscious companies that are looking to offset their carbon emissions. We help mining corporations, tourist getaways and even banks demonstrate their commitment to fighting climate change via buying carbon offsets and providing them with ESG consultancy services</p>
-                    </div>
-                </div>
-
-                <div class="flex-parent2">
-                    <div>
-                        <img src="{% static 'home/images/green.png' %}" alt="Green Project developers">
-                    </div>
-                    <div>
-                        <p>Green project initiators whose projects act as carbon sinks or prevent the emission of carbon into the atmosphere. Carbon sinks can be natural such as a conservancy with a large number of trees/sea algae or artificial such as an EV manufacturing plant. We are particularly interested in conservancies that are both carbon sinks and preservers of biodiversity.</p>
-                    </div>
-                </div>
+                    </fieldset>
+                    <input type="submit" value="Calculate">
+                    </form>
             </div>
 
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32661584.991704028!2d5.197955148537857!3d2.149901849198924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10a06c0a948cf5d5%3A0x108270c99e90f0b3!2sAfrica!5e0!3m2!1sen!2ske!4v1657011960282!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
 
+        <!-- ============================================================================================================ -->
         <section id="About">
             <h3>About Us</h3>
 
             <h4>Our Impact Statement</h4>
                 <h2>
-                    Our Primary Focus at Confit is achieving a net-zero emissions world by the year 2050.
+                    Our Primary Focus at Sustravels is achieving a net-zero emissions world by the year 2050.
                 </h2>
                     <cite>
-                        - Benson Mugure, Founder & CEO @ Confit
+                        - Benson Mugure, Founder & CEO @ Sustravels
                     </cite>
 
             <h4 class="founder">Founder Profile</h4>
@@ -135,7 +140,7 @@
         <!---Newsletter subscription (Hyper benchmark)-->
         <div id="footer1">
             <ul>
-                <li><a href="#Services">Services</a></li>
+                <li><a href="#Calculator">Calculator</a></li>
                 <li><a href="#About">About Us</a></li>
                 <li><a href="#ContactUs">Contact Us</a></li>
                 <li class="btn btn-default btn-primary"><a href="#">Join Us</a></li>
@@ -160,7 +165,7 @@
         <br>
         <p>
             <!--Copyright icon--> 
-            &#169 2022 Confit. All rights reserved
+            &#169 2022 Sustravels. All rights reserved
         </p>
       </div>
     </div>

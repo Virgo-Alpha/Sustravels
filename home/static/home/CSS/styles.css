@@ -1,4 +1,7 @@
-
+/* Styles TODOs
+    TODO: Edit stylessheet in line with template edits
+    
+*/
 body {
     padding: 0%;
     margin: 0%;
@@ -66,10 +69,21 @@ h4, h3 {
     color: whitesmoke;
 }
 
-#Services, #ContactUs {
+#Calculator, #ContactUs {
     background-color: #000000;
     color: aliceblue;
     padding-bottom: 50px;
+}
+
+#Calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+select {
+    color: #000000;
 }
 
 .service {
@@ -178,6 +192,14 @@ footer li a:hover {
 
 #sell {
     width: 50%;
+}
+
+#dropdown1, #dropdown2 {
+    margin: 25px;
+}
+
+iframe {
+    align-items: center;
 }
 
 /*A typical breakpoint for a mobile screen is 480px width.*/
