@@ -1,6 +1,12 @@
 /* Styles TODOs
     TODO: Edit stylessheet in line with template edits
-    
+    TODO: Save the csv + xcel sheet from documents, make calculator model with::after
+     ! haversine formula to calculate distance between cities
+     ! Carbon calculator after I have the distance
+     ? Logic to populate the drop downs with data from the csv/excel sheet [Django HTML forms: https://docs.djangoproject.com/en/4.0/topics/forms/]
+     The dropdowns should allow typing/choosing... autocomplete etc
+
+    TODO: JQuery/JS/PHP of the result after form Submission (Carbon number in tonnes/kgs & Big Five animals killed)
 */
 body {
     padding: 0%;
@@ -200,6 +206,11 @@ footer li a:hover {
 
 iframe {
     align-items: center;
+    margin-top: 50px;
+}
+
+#submitButton {
+    color: #000000;
 }
 
 /*A typical breakpoint for a mobile screen is 480px width.*/
