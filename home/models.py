@@ -21,12 +21,6 @@ class Calculator(models.Model):
     Result method
     """
 
-    # CITY_LIST = pd.read_excel("static/home/data_files/worldcities.excel")
-
-    # for row in CITY_LIST.to_dict('records'):
-    #     city = row["city"]
-    #     latitude = row["lat"]
-    #     longitude = row["lng"]
 
 
     dep_city = models.CharField(max_length=50, null=False)
