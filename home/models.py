@@ -6,7 +6,8 @@ from sqlalchemy import column
 # Create your models here.
 
 # models needed:
-    # 1. a model that fetches the cities from the .csv/.excel file and populates the view -> template -> form with it: pandas
+    # // 1. a model that fetches the cities from the .csv/.excel file and populates the view -> template -> form with it: pandas
+    # ? Check if modelForm fields can have widget=forms.Select(choices=xyz) so as to replece forms.py with a model here
     # 2. Fetch data from the form selection (after submission) and use it to calculate:
     #     ! a. Distance between the 2 points
     #     ! b. Carbon footprint
@@ -20,8 +21,6 @@ class Calculator(models.Model):
     Distance & carbon methods
     Result method
     """
-
-
 
     dep_city = models.CharField(max_length=50, null=False)
     des_city = models.CharField(max_length=50, null=False)

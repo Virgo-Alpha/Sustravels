@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import CalculatorForm
 
 # Create your views here.
+# ? How to render a form in an already existing template
 from django.http import HttpResponse, HttpResponseRedirect
 
 
@@ -21,7 +22,7 @@ def get_cities(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect('/thanks/') # ! Redirect to a similar page with the result
 
     # if a GET (or any other method) we'll create a blank form
     else:

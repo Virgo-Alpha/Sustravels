@@ -14,5 +14,5 @@ MyList2 = MyList.values.tolist()
 
 
 class CalculatorForm(forms.Form):
-    dep_city = forms.CharField(label='Departure Location:', widget=forms.Select(choices=MyList2))
+    dep_city = forms.CharField(label='Departure Location:', widget=forms.Select(choices=MyList2)) # ? Check for default option in dropdowns
     des_city = forms.CharField(label='Destination location:', widget=forms.Select(choices=MyList2))
