@@ -29,3 +29,7 @@ def get_cities(request):
         form = CalculatorForm()
 
     return render(request, 'calculator.html', {'form': form})
+
+
+def result(request):
+    return render(request, 'result.html')

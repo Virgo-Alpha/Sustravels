@@ -37,13 +37,12 @@
                         ! b. Carbon footprint
                     TODO 3. Modify the view/template (perhaps through a model) so as to display the result
                  -->
-
-                 <form action="result" method="post">
                     
-                    <fieldset>
-                        <legend><h1>Calculate your carbon footprint here</h1></legend>
-                        <!---=======================================================================================-->
-                        <form action="form" method="post">
+
+        <!---==============================================================================================================-->
+                        <form action="result" method="post">
+                            <fieldset>
+                                <legend><h1>Calculate your carbon footprint here</h1></legend>
                             {% csrf_token %}
                             {{ form }}
                             <input id="submitButton" type="submit" value="Calculate">
