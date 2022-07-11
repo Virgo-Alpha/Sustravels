@@ -2,6 +2,8 @@ from random import choices
 from django import forms
 import pandas as pd
 
+from home.models import MyList3
+
 # create your forms here
 
 CITY_LIST = pd.read_excel("./home/static/home/data_files/worldcities.xlsx")

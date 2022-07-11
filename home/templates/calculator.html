@@ -45,9 +45,14 @@
                                 <legend><h1>Calculate your carbon footprint here</h1></legend>
                             {% csrf_token %}
                             {{ form }}
-                            <input id="submitButton" type="submit" value="Calculate">
+                            <input id="submitButton" name="calculate" type="submit" value="Calculate">
                         </form>
                     </fieldset>
+
+                    {% if submitbutton == "calculate" %}
+                    <p> Your departure city is {{ dep_city }} </p>
+                    <p> Your destination city is {{ des_city }}</p>
+                    {% endif %}
             </div>
             <br>
             <br>
