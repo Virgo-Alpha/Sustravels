@@ -6,7 +6,8 @@ from .models import Calculator
 import pandas as pd
 
 # Create your views here.
-# ? How to render a form in an already existing template - Just put the action value of the form as ""
+# // ? How to render a form in an already existing template - Just put the action value of the form as ""
+# TODO: Adjust view so as to display the killing of Big 5
 from django.http import HttpResponse, HttpResponseRedirect
 
 CITY_LIST = pd.read_excel("./home/static/home/data_files/worldcities.xlsx")
@@ -22,22 +23,6 @@ MyList3 = MyList.to_dict('records')
 
 def calculator(request):
     return render(request, 'calculator.html')
-
-def get_cities(request):    
-    submitbutton = request.POST.get('Calculate')
-
-    dep_city = ''
-    des_city = ''
-
-    form = CalculatorForm(request.POST or None)
-    if form.is_valid():
-        dep_city = form.cleaned_data.get('dep_city')
-        des_city = form.cleaned_data.get('des_city')
-
-    context={'form':form,'dep_city': dep_city, 'des_city': des_city}
-
-    return render(request, 'calculator.html', context)
-
 
 def result(request):
 
@@ -71,10 +56,6 @@ def result(request):
 
                 Mydistance = Calculator.calculateDistance(loc1, loc2)
 
-            # dict = {
-            #     'dep_city' : dep_city,
-            #     'des_city' : des_city
-            # }
                 MyCarbon = Calculator.calculateCarbon(Mydistance)
 
             context={'form':form,'dep_city': dep_city, 'des_city': des_city, 'Mydistance': Mydistance, 'MyCarbon': MyCarbon}
@@ -84,3 +65,18 @@ def result(request):
     else:
         form = CalculatorForm()
         return HttpResponseRedirect('')
+
+def get_cities(request):    
+    submitbutton = request.POST.get('Calculate')
+
+    dep_city = ''
+    des_city = ''
+
+    form = CalculatorForm(request.POST or None)
+    if form.is_valid():
+        dep_city = form.cleaned_data.get('dep_city')
+        des_city = form.cleaned_data.get('des_city')
+
+    context={'form':form,'dep_city': dep_city, 'des_city': des_city}
+
+    return render(request, 'calculator.html', context)

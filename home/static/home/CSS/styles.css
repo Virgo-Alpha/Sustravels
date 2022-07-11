@@ -1,13 +1,13 @@
 /* Styles TODOs
     // TODO 1: Edit stylessheet in line with template edits
     // TODO 2: Save the csv + xcel sheet from documents
-    TODO 3: make calculator model with:
-     ! haversine formula to calculate distance between cities
-     ! Carbon calculator after I have the distance
+    // TODO 3: make calculator model with:
+     // ! haversine formula to calculate distance between cities
+     // ! Carbon calculator after I have the distance
      // ? Logic to populate the drop downs with data from the csv/excel sheet [Django HTML forms: https://docs.djangoproject.com/en/4.0/topics/forms/], np on sololearn
-     The dropdowns should allow typing/choosing... autocomplete etc
+     // The dropdowns should allow typing/choosing... autocomplete etc
 
-    TODO: JQuery/JS/PHP of the result after form Submission (Carbon number in tonnes/kgs & Big Five animals killed)
+    // TODO: JQuery/JS/PHP of the result after form Submission (Carbon number in tonnes/kgs & Big Five animals killed)
 */
 body {
     padding: 0%;
