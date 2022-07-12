@@ -7,7 +7,7 @@ import pandas as pd
 
 # Create your views here.
 # // ? How to render a form in an already existing template - Just put the action value of the form as ""
-# TODO: Adjust view so as to display the killing of Big 5
+# // TODO: Adjust view so as to display the killing of Big 5
 from django.http import HttpResponse, HttpResponseRedirect
 
 CITY_LIST = pd.read_excel("./home/static/home/data_files/worldcities.xlsx")

@@ -17,7 +17,6 @@ import haversine as hs
 # TODO: Hosting the application
 # // TODO: Method for killed Big 5 animals: lion, leopard, rhino, elephant and African Buffalo
 # ! Find out how much carbon kills 1 animal above
-# ? Hosting on Github Pages
 
 
 CITY_LIST = pd.read_excel("./home/static/home/data_files/worldcities.xlsx")

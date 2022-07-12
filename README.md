@@ -66,7 +66,11 @@ To run the django server, use the command:
 python manage.py runserver
 ```
 
-You can the go to your browser and type: http://127.0.0.1:8000/
+You can the go to your browser and type:
+```
+http://127.0.0.1:8000/calculator/
+```
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
