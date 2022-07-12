@@ -58,7 +58,16 @@ def result(request):
 
                 MyCarbon = Calculator.calculateCarbon(Mydistance)
 
-            context={'form':form,'dep_city': dep_city, 'des_city': des_city, 'Mydistance': Mydistance, 'MyCarbon': MyCarbon}
+                Killings = Calculator.killings(MyCarbon) # A tuple
+
+                Leopard = Killings[0]
+                Lion = Killings[1]
+                Buffalo = Killings[2]
+                Rhino = Killings[3]
+                Elephant = Killings[4]
+
+
+            context={'form':form,'dep_city': dep_city, 'des_city': des_city, 'Mydistance': Mydistance, 'MyCarbon': MyCarbon, 'Leopard' : Leopard, 'Lion' : Lion, 'Buffalo' : Buffalo, 'Rhino' : Rhino, 'Elephant' : Elephant}
 
             return render(request, 'result.html', context)
     
