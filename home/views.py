@@ -1,14 +1,17 @@
-from turtle import distance
+"""
+Views of MVC
+"""
 from django.shortcuts import render
-from matplotlib.style import context
-from .forms import CalculatorForm
-from .models import Calculator
+from django.http import HttpResponseRedirect
 import pandas as pd
+from .models import Calculator
+from .forms import CalculatorForm
+
+
 
 # Create your views here.
-# // ? How to render a form in an already existing template - Just put the action value of the form as ""
-# // TODO: Adjust view so as to display the killing of Big 5
-from django.http import HttpResponse, HttpResponseRedirect
+
+
 
 CITY_LIST = pd.read_excel("./home/static/home/data_files/worldcities.xlsx")
 
@@ -22,10 +25,13 @@ MyList3 = MyList.to_dict('records')
 #     return HttpResponse("Hello, world. You're at the polls index.")
 
 def calculator(request):
+    """
+    Calculator class"""
     return render(request, 'calculator.html')
 
 def result(request):
-
+    """
+    Result display"""
     dep_city = ''
     des_city = ''
 
@@ -70,7 +76,6 @@ def result(request):
             context={'form':form,'dep_city': dep_city, 'des_city': des_city, 'Mydistance': Mydistance, 'MyCarbon': MyCarbon, 'Leopard' : Leopard, 'Lion' : Lion, 'Buffalo' : Buffalo, 'Rhino' : Rhino, 'Elephant' : Elephant}
 
             return render(request, 'result.html', context)
-    
     else:
         form = CalculatorForm()
         return HttpResponseRedirect('')
