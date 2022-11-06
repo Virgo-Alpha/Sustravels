@@ -21,13 +21,23 @@ LatLon = CITY_LIST[['lat', 'lng']]
 MyList2 = MyList.values.tolist()
 MyList3 = MyList.to_dict('records')
 
-# def index(request):
-#     return HttpResponse("Hello, world. You're at the polls index.")
-
-def calculator(request):
+def get_cities(request):
     """
-    Calculator class"""
-    return render(request, 'calculator.html')
+    This function renders the calculator page
+    """
+    submitbutton = request.POST.get('Calculate')
+
+    dep_city = ''
+    des_city = ''
+
+    form = CalculatorForm(request.POST or None)
+    if form.is_valid():
+        dep_city = form.cleaned_data.get('dep_city')
+        des_city = form.cleaned_data.get('des_city')
+
+    context={'form':form,'dep_city': dep_city, 'des_city': des_city}
+
+    return render(request, 'calculator.html', context)
 
 def result(request):
     """
@@ -79,18 +89,3 @@ def result(request):
     else:
         form = CalculatorForm()
         return HttpResponseRedirect('')
-
-def get_cities(request):    
-    submitbutton = request.POST.get('Calculate')
-
-    dep_city = ''
-    des_city = ''
-
-    form = CalculatorForm(request.POST or None)
-    if form.is_valid():
-        dep_city = form.cleaned_data.get('dep_city')
-        des_city = form.cleaned_data.get('des_city')
-
-    context={'form':form,'dep_city': dep_city, 'des_city': des_city}
-
-    return render(request, 'calculator.html', context)
