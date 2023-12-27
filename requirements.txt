@@ -1,4 +1,4 @@
+django-environ
 virtualenv
 django
 haversine
-django-environ
