@@ -7,10 +7,7 @@ import pandas as pd
 from .models import Calculator
 from .forms import CalculatorForm
 
-
-
 # Create your views here.
-
 
 
 CITY_LIST = pd.read_excel("./home/static/home/data_files/worldcities.xlsx")

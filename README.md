@@ -1,7 +1,7 @@
 <center> <h1>Sustravels </h1></center>
 
 
-## ALX SE Program Final Portfolio Project
+# Sustravels: ALX SE Program Final Portfolio Project
 
 Sustravels is a website that allows travelers to check how much damage their travel is doing to the environment. 
 It will be implemented as a web application with an embedded carbon calculator that enables the user to gauge their carbon emissions as well as how many animals they will be killing. 
@@ -57,13 +57,13 @@ Install the django environ module using the following command:
 
 Apply migrations using the following command:
 ```bash
- python manage.py migrate
+ python3 manage.py migrate
 ```
 
 
 To run the django server, use the command:
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 You can the go to your browser and type:
