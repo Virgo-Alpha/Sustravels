@@ -68,7 +68,7 @@ python3 manage.py runserver
 
 You can the go to your browser and type:
 ```
-http://127.0.0.1:8000/calculator/
+http://127.0.0.1:8000
 ```
 
 
